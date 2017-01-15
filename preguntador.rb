@@ -2,7 +2,10 @@ require 'logger'
 
 REFACTORING = {
   1 => 'extract method',
-  2 => 'inline method'
+  2 => 'inline method',
+  3 => 'inline temp',
+  4 => 'replace temp with query',
+  5 => 'introduce explaining variable'
 }
 
 puts '¿Cuáles son los refactors que describe Martin Fowler en su libro "Refactoring"?'
@@ -17,5 +20,5 @@ REFACTORING.each do |orden, nombre|
   end
 end
 
-log.info('Correcto!')
+log.info("#{REFACTORING.size} respuestas correctas!")
 puts "OK!"
